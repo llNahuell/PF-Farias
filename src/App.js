@@ -1,13 +1,19 @@
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de productos que necesitás para tu pc"/>
-    </>    
+  <BrowserRouter>
+    <NavBar />
+    <Routes>
+      <Route path="/" element={ <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />} />
+      <Route path="/category/:id" element={ <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />} />
+    </Routes>    
+  </BrowserRouter>
+
   );
 }
 

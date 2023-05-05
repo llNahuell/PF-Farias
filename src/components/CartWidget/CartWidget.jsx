@@ -9,9 +9,7 @@ const styles ={
 ,
 span: {
     paddingLeft: 5,
-}
-
-}
+}}
 
 export const CartWidget = () => {
     return(
@@ -19,6 +17,4 @@ export const CartWidget = () => {
         <img src={cart} alt='Imagen de un carrito de compras' style={styles.img}/>
         <span style={styles.span} >0</span>
         </Badge>
-
-    )
-} 
+    )} 
