@@ -1,18 +1,16 @@
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import  { default as ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount'
 
 
 function App() {
   return (
-  <BrowserRouter>
+  <div className="App">
     <NavBar />
-    <Routes>
-      <Route path="/" element={ <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />} />
-      <Route path="/category/:id" element={ <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />} />
-    </Routes>    
-  </BrowserRouter>
+    <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />
+    <ItemCount initial={0} stock={10} onAdd={(quantity) => console.log('cantidad agregada ',quantity)} />
+  </div>
 
   );
 }
