@@ -1,7 +1,7 @@
 import './App.css';
-import { NavBar } from './components/NavBar/NavBar';
-import  { default as ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount'
+import  { NavBar }  from './components/NavBar/NavBar';
+import  ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   <div className="App">
     <NavBar />
     <ItemListContainer greeting="Bienvenidos a AltF4, la tienda de componentes que necesitás para tu pc" />
-    <ItemCount initial={0} stock={10} onAdd={(quantity) => console.log('cantidad agregada ',quantity)} />
+    <ItemDetailContainer />
   </div>
 
   );

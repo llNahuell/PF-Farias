@@ -1,4 +1,5 @@
-import ''
+import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({id, name, img, category, descriptiion, price, stock}) => {
 
@@ -29,3 +30,5 @@ const ItemDetail = ({id, name, img, category, descriptiion, price, stock}) => {
         </article>
     )
 }
+
+export default ItemDetail
