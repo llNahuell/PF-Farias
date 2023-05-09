@@ -1,0 +1,20 @@
+img{
+    width: 150px;
+    height: 130px;
+}
+
+.badge img{
+    height: 40px;
+    width: 45px;
+}
+
+article{
+    width: 300px;
+    background-color: rgba(183, 0, 255, 0.219);
+}
+
+.Option{
+    background-color: rgba(3, 158, 158, 0.63);
+    padding: 6px;
+    border-radius: 50px;
+}
