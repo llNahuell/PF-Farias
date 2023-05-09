@@ -1,3 +1,9 @@
+## GIF SEGUNDA ENTREGA
+
+dejo la preview de la segunda entrega del proyecto
+
+! [GIF] (/public/gif/PreEntrega2-Farias.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
