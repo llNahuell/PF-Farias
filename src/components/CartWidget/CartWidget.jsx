@@ -1,4 +1,3 @@
-import Badge from 'react-bootstrap/Badge';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom'
@@ -18,10 +17,8 @@ export const CartWidget = () => {
 
     return(
         <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none'}}>
-            <Badge bg="dark">
             <img src={cart} alt='Imagen de un carrito de compras' style={styles.img}/>
             { totalQuantity }
-            </Badge>
         </Link>
     )} 
 
