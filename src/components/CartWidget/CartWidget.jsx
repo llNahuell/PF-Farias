@@ -1,24 +1,40 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { Link } from 'react-router-dom'
-import cart from './assets/cart.png'
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import "./CartWidget.css"
 
-const styles ={
-    img: {
-        height: 40
-    }
-,
-span: {
-    paddingLeft: 5,
-}}
+import { CartContext } from "../../context/CartContext"
+import Badge from "react-bootstrap/Badge"
+import Button from "react-bootstrap/Button"
+import cart from "./assets/cart.png"
+
+const styles = {
+	span: {
+		paddingLeft: 5,
+	},
+	img: {
+		height: 40,
+	},
+}
 
 export const CartWidget = () => {
-    const { totalQuantity } = useContext(CartContext)
+	const { addedProducts } = useContext(CartContext)
 
-    return(
-        <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none'}}>
-            <img src={cart} alt='Imagen de un carrito de compras' style={styles.img}/>
-            { totalQuantity }
-        </Link>
-    )} 
+	const totalQuantity = () =>
+		addedProducts.reduce(
+			(acumulador, valorActual) =>
+				acumulador + valorActual.quantity,
+			0
+		)
 
+	return (
+		!!totalQuantity() && (
+			<Link to="/cart">
+				<Badge bg="dark">
+					<img src={cart} alt="Carrito" style={styles.img} />
+					<span style={styles.span}>{totalQuantity()}</span>
+				</Badge>
+				<Button>Terminar mi compra</Button>
+			</Link>
+		)
+	)
+}
