@@ -3,6 +3,7 @@
 dejo la preview de la segunda entrega del proyecto
 
 ![GIF](./public/gif/PreEntrega2-Farias.gif)
+![GIF](./public/gif/PF-Farias.gif)
 
 # Getting Started with Create React App
 
